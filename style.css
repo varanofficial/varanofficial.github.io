@@ -1,0 +1,284 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg:      #0c0c0c;
+    --surface: #141414;
+    --border:  #222;
+    --text:    #c4c4c4;
+    --heading: #efefef;
+    --muted:   #555;
+    --accent:  #67e8f9;
+    --accent-dim: #1a3a40;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* ── Nav ── */
+nav {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--heading); }
+
+/* ── Main layout ── */
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+}
+
+/* ── Hero ── */
+.hero { margin-bottom: 4.5rem; }
+
+.hero-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(2.5rem, 8vw, 4.25rem);
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-name em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+.hero p {
+    color: var(--text);
+    font-size: 1.0625rem;
+    max-width: 560px;
+}
+
+.hero p + p { margin-top: 0.9rem; }
+
+/* ── Divider ── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3.5rem 0;
+}
+
+/* ── Game entry ── */
+.game { margin-bottom: 3rem; }
+
+.game-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.game-status {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-left: 0.75rem;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.game p {
+    color: var(--text);
+    margin-top: 0.6rem;
+    max-width: 520px;
+}
+
+.game-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.game-links a {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.game-links a:hover {
+    color: var(--heading);
+    border-color: var(--heading);
+}
+
+/* ── Contact ── */
+.contact a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+.contact a:hover { text-decoration: underline; }
+
+/* ── Footer ── */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 1.75rem 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+footer a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+footer a:hover { color: var(--text); }
+
+/* ── Legal pages ── */
+.legal-nav-back {
+    padding: 1.5rem 2rem;
+}
+
+.legal-nav-back a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+}
+
+.legal-nav-back a:hover { color: var(--text); }
+
+.legal-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem 2rem 6rem;
+}
+
+.legal-wrap h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 0.4rem;
+}
+
+.legal-updated {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.legal-wrap > p:first-of-type {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+}
+
+.legal-wrap h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 2.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.legal-wrap p {
+    color: var(--text);
+    margin-bottom: 0.8rem;
+}
+
+.legal-wrap ul {
+    color: var(--text);
+    padding-left: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.legal-wrap li { margin-bottom: 0.3rem; }
+
+.legal-wrap strong { color: var(--heading); font-weight: 600; }
+
+.legal-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.25rem;
+    font-size: 0.875rem;
+}
+
+.legal-wrap th {
+    background: var(--surface);
+    color: var(--heading);
+    padding: 0.6rem 1rem;
+    text-align: left;
+    border: 1px solid var(--border);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.legal-wrap td {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+}
+
+.legal-wrap .contact-line {
+    margin-top: 0.5rem;
+}
+
+.legal-wrap .contact-line a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.legal-wrap .contact-line a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    nav { padding: 1.25rem; }
+    main { padding: 3rem 1.25rem 5rem; }
+    .hero-name { font-size: 2.5rem; }
+    .legal-wrap { padding: 1.5rem 1.25rem 5rem; }
+    .nav-links { gap: 1.25rem; }
+}
